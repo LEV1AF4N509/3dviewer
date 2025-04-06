@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Model Viewer</title>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+<body>
+    <!-- Компонент для отображения 3D-модели и включения AR -->
+    <model-viewer 
+        src="test.glb"                      <!-- Путь к 3D-модели -->
+        ar                                  <!-- Включить AR -->
+        ar-modes="webxr scene-viewer quick-look" <!-- Поддержка AR на Android и iOS -->
+        camera-controls                    <!-- Управление камерой (мышь/пальцы) -->
+        auto-rotate                        <!-- Автоматическое вращение модели -->
+        ar-placement="floor"              <!-- Привязка к полу/плоскости в AR -->
+        scale="0.1 0.1 0.1"               <!-- Масштаб модели (X Y Z) -->
+        style="width: 100%; height: 500px;"> <!-- Размер области просмотра -->
+    </model-viewer>
+</body>
+</html>
